@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1"/>
+        <meta name="author" content="Yi Yang Tan"/>
+        <title>Yi Yang Tan</title>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="public/favicon/apple-touch-icon-57x57.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="public/favicon/apple-touch-icon-114x114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="public/favicon/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/favicon/apple-touch-icon-144x144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="public/favicon/apple-touch-icon-60x60.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="public/favicon/apple-touch-icon-120x120.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="public/favicon/apple-touch-icon-76x76.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="public/favicon/apple-touch-icon-152x152.png"/>
+        <link rel="icon" type="image/png" sizes="196x196" href="public/favicon/favicon-196x196.png"/>
+        <link rel="icon" type="image/png" sizes="96x96" href="public/favicon/favicon-96x96.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="public/favicon/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="public/favicon/favicon-16x16.png"/>
+        <link rel="icon" type="image/png" sizes="128x128" href="public/favicon/favicon-128.png"/>
+        <meta name="application-name" content="Sudharshan Ravindran"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF"/>
+        <meta name="msapplication-TileImage" content="public/favicon/mstile-144x144.png"/>
+        <meta name="msapplication-square70x70logo" content="public/favicon/mstile-70x70.png"/>
+        <meta name="msapplication-square150x150logo" content="public/favicon/mstile-150x150.png"/>
+        <meta name="msapplication-wide310x150logo" content="public/favicon/mstile-310x150.png"/>
+        <meta name="msapplication-square310x310logo" content="public/favicon/mstile-310x310.png"/>
+
+        <!-- build:css -->
+        <link rel="stylesheet" href="public/css/default.css"/>
+        <link rel="stylesheet" href="public/css/layout.css"/>
+        <link rel="stylesheet" href="public/css/media-queries.css"/>
+        <link rel="stylesheet" href="public/assets/main.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+      
+        <!-- <link rel="stylesheet" href="public/css/magnific-popup.css"/> -->
+        <!-- <link rel="stylesheet" href="public/css/main.css"/> -->
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="public/bundle.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+              $( "#accordion" ).accordion({
+                active: false,
+                collapsible: true,
+                heightStyle: "content"
+              });
+              $( "#accordion2" ).accordion({
+                active: false,
+                collapsible: true,
+                heightStyle: "content"
+              });
+              $( "#accordion3" ).accordion({
+                active: false,
+                collapsible: true,
+                heightStyle: "content"
+              });
+                  
+            } );
+            </script>
+                <main class="page-content" aria-label="Content">
+                    <div class="wrapper">
+                      <h4>Samples of my work</h4>
+                      <div class="home">
+              
+            <h1>Systems Architecture Designs</h1>
+            <div id="accordion3">
+              <h2>Example</h2>
+            <img src="https://sketch.io/render/sk-05262812b6c05b1c3f756b29678f71f5.jpeg">
+            </div>
+            
+            
+            
+            <h1>Front-End Javascript Code</h1>
+            
+            <div id="accordion">
+            
+              <h2 >React</h2>
+              <div>
+                <pre>
+                <code id="demo" class="collapse" data-lang="javascript">
+            
+                import React from 'react'
+                import ReactDOM from 'react-dom'
+                import axios from 'axios'
+                import CatsList from './CatsList.js'
+                import LendCats from './LendCats.js'
+                  
+                  export default class App extends React.Component{
+                    constructor(){
+                      super()
+                      this.state={
+                        showAvailableCats:true,
+                        catsList : []
+                      }
+                  
+                      this.onClickBorrow = this.onClickBorrow.bind(this);
+                      this.onClickLend = this.onClickLend.bind(this);
+                    }
+                  
+                    componentWillMount(){
+                      var catsArr = this.state.catsList.slice();
+                      var context = this;
+                      axios.get('/getCats')
+                        .then((response) => {
+                          console.log('this should be the cats arr' , response.data)
+                          response.data.forEach(function(cat){
+                            catsArr.push(cat);
+                          })
+                          context.setState({
+                            catsList:catsArr,
+                            showAvailableCats : true
+                          })
+                        }).then(function(){
+                          console.log('cats in index', context.state.catsList)
+                          context.render()
+                        })
+                        .catch((error) => console.log(error))
+                    }
+                  
+                    onClickBorrow(){
+                      window.location.reload()
+                      this.setState({
+                        showAvailableCats: true
+                      })
+                  
+                    }
+                  
+                    onClickLend(){
+                      this.setState({
+                        showAvailableCats: false
+                      })
+                  
+                    }
+                  
+                    render(){
+                      return (
+                        <div>
+                          <div className = "buttons">
+                            <button onClick = {this.onClickBorrow}>Borrow a Cat</button>
+                            <button onClick = {this.onClickLend}>Lend a Cat</button>
+                          </div>
+                          {this.state.showAvailableCats ? <CatsList cats={this.state.catsList} /> : <LendCats />}
+                        </div>
+                      )
+                    }
+                  }
+                  
+                  ReactDOM.render(<App /> , document.getElementById('App'))
+                  
+                </code>
+              </pre>
+              </div>
+            
+            
+              <h2 >Redux</h2>
+              <div>
+              <pre><code class="front-end" data-lang="javascript">
+                  import React, { Component } from 'react'
+                  import { FormGroup } from 'react-bootstrap'
+                  import axios from 'axios'
+                  import { connect } from 'react-redux';
+                  import { Button } from 'react-bootstrap'
+                  import Header from '../containers/header.jsx'
+                  import URL from '../../config/url.js'
+                  
+                  class Setting extends Component {
+                    constructor(props) {
+                      super(props)
+                      this.handleClickCancel = this.handleClickCancel.bind(this)
+                      this.handleClickUpdate = this.handleClickUpdate.bind(this)
+                      this.handleChange = this.handleChange.bind(this)
+                  
+                      this.handleIconClick = this.handleIconClick.bind(this)
+                      // this.handleIconClick = this.handleIconClick.bind(this)
+                      this.state = {
+                        username: '',
+                        password: '',
+                        email: '',
+                        firstname: '',
+                        lastname: '',
+                        quote: '',
+                        icon: ''
+                      };
+                    }
+                  
+                    componentDidMount() {
+                      // this.setState({username: this.currentUserStore.username})
+                    }
+                  
+                    handleClickCancel() {
+                      this.props.browserHistory.history.push('/main')
+                    }
+                  
+                    async handleClickUpdate() {
+                      console.log(this.currentUserStore)
+                      // alert(JSON.stringify(this.state))
+                      let userObj = {
+                        username: this.props.currentUserStore.username,
+                        first: this.state.firstname,
+                        last: this.state.lastname,
+                        quote: this.state.quote,
+                        icon: this.state.icon
+                      }
+                      // alert(JSON.stringify(userObj))
+                      let response = await axios.post(`${URL.LOCAL_SERVER_URL}/main/update`, userObj)
+                      this.props.browserHistory.history.push('/main')
+                    }
+                  
+                    handleChange(event) {
+                      var obj = {};
+                      obj[event.target.name] = event.target.value;
+                      this.setState(obj, () => {
+                        console.log('new state: ', this.state)
+                      });
+                    }
+                  
+                    handleIconClick(e) {
+                      console.log('icon clicked', e.target.src)
+                      this.setState({
+                        icon: e.target.src
+                      })
+                    }
+                  
+                  
+                  
+                    render() {
+                      return (
+                        <div className="setting" id="setting">
+                          <div><Header /></div>
+                          <FormGroup>
+                          {/* <p> Username: {this.props.currentUserStore.username} </p> */}
+                          {/* <p> Email: {this.props.currentUserStore.email} </p> */}
+                          {/* <p> FirstName: {this.props.currentUserStore.first} </p> */}
+                          <div><label> New First Name: <input type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange} /></label></div><br></br>
+                          {/* <p> LastName: {this.props.currentUserStore.last} </p> */}
+                          <div><label> New Last Name: <input type="text" name="lastname" value={this.state.lastname} onChange={this.handleChange} /></label></div><br></br>
+                          <p> Current motto: {this.props.currentUserStore.quote} </p><br></br>
+                          <div><label> New motto: <input type="text" name="quote" value={this.state.quote} onChange={this.handleChange} /></label></div><br></br>
+                            <div>
+                              <label> Choose a New Icon: </label>
+                              <img src="https://thumbs.dreamstime.com/z/businessman-profile-icon-male-portrait-business-man-flat-design-vector-illustration-55382689.jpg" width="100" height="100" onClick={this.handleIconClick}></img>
+                              <img src="https://thumbs.dreamstime.com/z/face-woman-hairdo-face-appearance-single-icon-flat-style-vector-symbol-stock-illustration-face-98467159.jpg" width="100" height="100" onClick={this.handleIconClick}></img>
+                            </div>
+                          <Button bsStyle="primary" onClick={this.handleClickCancel}>Cancel</Button >
+                          <Button bsStyle="warning" onClick={this.handleClickUpdate}>Update</Button >
+                          </FormGroup>
+                        </div>
+                      )
+                    }
+                  }
+                  
+                  function mapStateToProps(state) {
+                    return {
+                      currentUserStore: state.currentUserStore,
+                      browserHistory: state.browserHistory
+                    }
+                  }
+                  
+                  export default connect(mapStateToProps)(Setting);
+              </code></pre>
+              </div>
+            </div>
+            
+            
+            
+              <h1>Back-End Javascript Code</h1>
+            
+            <div id="accordion2">
+              <h2> NodeJS Restful API</h2>
+              <div>
+              <pre><code class ="back-end" data-lang="javascript">
+                  const db = require('../../database/database.js');
+                  const {getGeocode} = require('../../utils/getGeocode');
+                  const nodemailer = require('nodemailer');
+                  const path = require('path')
+                  
+                  exports.allItems = function(req, res) {
+                    const text = 'SELECT * FROM items';
+                    db.query(text, (err, query) => {
+                      if (err) {
+                        console.log(err.stack)   
+                      } else { 
+                        res.json(query.rows)
+                      }
+                    }) 
+                  };
+                  
+                  exports.addItem = function(req, res) {
+                    console.log(req.body);
+                    req.body.price = parseInt(req.body.price);
+                    let lat, lng;
+                    getGeocode(req.body.location, (data) => {
+                      console.log('DATA?', data);
+                      lat = data.lat.toString();
+                      lng = data.lng.toString();
+                      const text = `INSERT INTO items (item_name, image_url, location, type, price, description, owner_email, owner_lat, owner_lng) VALUES ('${req.body.item_name}', '${req.body.image_url}', '${req.body.location}', '${req.body.type}', ${req.body.price}, '${req.body.description}', '${req.body.owner_email}', '${lat}', '${lng}')`;
+                      db.query(text, (err, query) => {
+                        if (err) {
+                          console.log(err);
+                        } else {
+                          res.send('item saved to database');
+                        }
+                      })
+                    });
+                  }
+                  
+                  exports.sendEmail = function(req, res) {
+                    const smtpTrans = nodemailer.createTransport({
+                      service: 'Gmail',
+                      auth: {
+                        user: 'buyandsell404@gmail.com',
+                        pass: 'buyandsell'
+                      }
+                    });
+                    
+                    const mailOptions = {
+                      from: 'buyandsell404@gmail.com',
+                      to: req.body.owner_email,
+                      subject: 'A BuyAndSell user has sent you an email about your item!',
+                      text: req.body.text + ' Contact this user at ' + req.body.user_email
+                    };
+                  
+                    smtpTrans.sendMail(mailOptions, function(error, info){
+                      if (error) {
+                        console.log(error);
+                      } else {
+                        console.log('Email sent: ' + info);
+                      }
+                    });
+                  
+                    res.send('email has been sent');
+                  };
+                  
+                  exports.addHistory = function(req, res) {
+                    res.sendFile(path.resolve(__dirname, '../../client/build/index.html'));
+                  }
+                  
+                  exports.getpolicy = function(req,res){
+                    res.sendFile(path.resolve(__dirname, '../../client/build/privacy/privacy.html'));  
+                  }
+                  
+                  exports.addUser = function(req,res){
+                    console.log('should be new user ', req.body)
+                    const text = `INSERT INTO users (id, email, password, photo) VALUES ('${req.body.id}', '${req.body.email}', '${req.body.password}', '${req.body.photo}')`;
+                    db.query(text, (err, query) => {
+                      if (err) {
+                        console.log(err);
+                      } else {
+                        res.send('item saved to database');
+                      }
+                    })
+                  }
+                  
+                  exports.getUser = function(req,res){
+                    console.log('should be user id ', req.query.id)
+                    const text = `SELECT * from users WHERE id = ('${req.query.id}')`;
+                    db.query(text,(err,query)=>{
+                      if(err){
+                        console.log(err);
+                      } else{
+                        console.log('the user ', query.rows)
+                        res.json(query.rows);
+                      }
+                    })
+                  
+                  }
+                  
+                  exports.deleteItem = function(req,res){
+                    console.log('please be data ', req.body)
+                    const text = `DELETE FROM items WHERE owner_email = ('${req.body.owner_email}') AND item_name = ('${req.body.item_name}')`;
+                    db.query(text,(err,query)=>{
+                      if(err){
+                        console.log(err);
+                      } else{
+                        console.log('the user ', query.rows)
+                        res.send('item deleted from database');
+                      }
+                    })
+                  }
+                  
+            
+            
+            
+              </code></pre>
+              </div>
+            
+            
+              <h2> SocketIO Server </h2>
+              <div>
+              <pre><code code class ="back-end" data-lang="javascript">
+                  const express = require('express');
+                  const s3models = require('./s3models.js')
+                  
+                  const https = require('https');
+                  const http = require('http');
+                  const SocketIo = require('socket.io');
+                  const env = require('../config/env.js');
+                  
+                  const fs = require('fs');
+                  let siofu = require('socketio-file-upload');
+                  
+                  var app = express();
+                  
+                  app.use(siofu.router)
+                  app.use(function(req, res, next) {
+                          res.header("Access-Control-Allow-Origin", "*");
+                          // res.header("Access-Control-Allow-Headers", "*");
+                          res.header("Access-Control-Allow-Headers", "X-Requested-With");
+                          res.header("Access-Control-Allow-Headers", "Content-Type");
+                          res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
+                          next();
+                      });
+                  
+                  const server = http.createServer(app);
+                  const io = SocketIo(server);
+                  var os = require('os');
+                  
+                  // lol yolo
+                  io.set('origins', '*:*');
+                  io.on('connection', (socket) => {
+                    let uploader = new siofu();
+                    uploader.dir = './files';
+                    uploader.listen(socket);
+                  
+                    uploader.on("saved", function(event){
+                      console.log(event.file);
+                      s3models.dropFile(event.file, function (err, dataObj) {
+                          console.log('s3 socket.js dataObj ', dataObj)
+                      })
+                    })
+                  
+                    uploader.on("error", function(event){
+                      console.log("Error from uploader", event);
+                    });
+                  
+                    socket.on('private', body => {
+                      console.log('this is private channel ', body)
+                      socket.broadcast.emit('private', body)
+                    })
+                  
+                    socket.on('group', body => {
+                      console.log('this is group channel ', body)
+                      socket.broadcast.emit('group', body)
+                    })
+                  
+                    socket.on('request', body => {
+                      console.log('this is request channel ', body)
+                      socket.broadcast.emit('request', body)
+                    })
+                  
+                    socket.on('accept', body => {
+                      console.log('this is accept channel ', body)
+                      socket.broadcast.emit('accept', body)
+                    })
+                  
+                    socket.on('newroom', body => {
+                      console.log('this is newroom channel ', body)
+                      socket.broadcast.emit('newroom', body)
+                    })
+                  
+                    socket.on('message', function(message) {
+                      console.log('Client said: ', message);
+                      // for a real app, would be room-only (not broadcast)
+                      socket.broadcast.emit('message', message);
+                    });
+                  
+                  
+                  
+                    socket.on('create or join', function(room) {
+                      console.log('Received request to create or join room ' + room);
+                      var clientsInRoom = io.nsps['/'].adapter.rooms[room];    // socket.io 1.4.8
+                      var numClients = clientsInRoom === undefined ? 0 : Object.keys(clientsInRoom.sockets).length;
+                      
+                      // max two clients
+                      if (numClients === 2) {
+                        socket.emit('full', room);
+                        return;
+                      }
+                      
+                      console.log('Room ' + room + ' now has ' + (numClients + 1) + ' client(s)');
+                      
+                      if (numClients === 0) {
+                        socket.join(room);
+                        console.log('Client ID ' + socket.id + ' created room ' + room);
+                        socket.emit('created', room, socket.id);
+                      
+                      } else {
+                        console.log('Client ID ' + socket.id + ' joined room ' + room);
+                        io.sockets.in(room).emit('join', room);
+                        socket.join(room);
+                        socket.emit('joined', room, socket.id);
+                        io.sockets.in(room).emit('ready');
+                      }
+                      
+                    });
+                  
+                  
+                    socket.on('ipaddr', function() {
+                      var ifaces = os.networkInterfaces();
+                      for (var dev in ifaces) {
+                        ifaces[dev].forEach(function(details) {
+                          if (details.family === 'IPv4' && details.address !== '127.0.0.1') {
+                            socket.emit('ipaddr', details.address);
+                          }
+                        });
+                      }
+                    });
+                  
+                  
+                    socket.on('bye', function(){
+                      console.log('received bye');
+                    });
+                  
+                  
+                  });
+                  
+                  const port = process.env.PORT || env.SOCKET_SERVER_PORT;
+                  server.listen(port, () => console.log(`socket server listening on port ${port}`));
+              </code></pre>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="wrapper">
+      
+          <h2 class="footer-heading">Yang Tan 陈奕洋</h2>
+      
+          <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+              <ul class="contact-list">
+                <li>
+                  
+                    Tel: (424)301-0700
+                  
+                  </li>
+                  
+                  <li><a href="mailto:yangtan.wfn@gmail.com">yangtan.wfn@gmail.com</a></li>
+                  
+              </ul>
+            </div>
+      
+            <div class="footer-col footer-col-2">
+              <ul class="social-media-list">
+                
+                <li>
+                  <a href="https://github.com/yiytan92"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+      </span><span class="username">yiytan92</span></a>
+      
+                </li>
+                
+      
+                
+                <li>
+                  <a href="https://www.linkedin.com/in/yiytan/"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+      </span><span class="username">yiytan</span></a>
+      
+                </li>
+                
+              </ul>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </footer>
+      
+                
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-83943642-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
