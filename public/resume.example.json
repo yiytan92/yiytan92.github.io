@@ -1,177 +1,178 @@
 {
-    "basics": {
-        "name": "Yi Yang Tan",
-        "label": "Software Engineer",
-        "picture": "https://i.imgur.com/4PZmUNk.jpg",
-        "email": "yangtan.wfn@gmail.com",
-        "website": "yiyangtan.com",
-        "summary": [
-            "Analytical, creative, persistent and team-oriented software engineer with 3 years of experience writing code for software, mobile apps, mobile games, economics/data analysis and web.",
-            "Have strong interests in new technologies such as machine-learning, blockchain tech, Virtual Reality",
-            "Excellent written and verbal communication skills in English and Chinese. With strong code-writing discipline, always striving for efficient and test-driven code."
-        ],
-        "location": {
-            "address": "<ADDRESS>",
-            "postalCode": "<POSTAL_CODE>",
-            "city": "Penang/ Los Angeles",
-            "countryCode": "Malaysia/ United States",
-            "region": "<REGION>"
-        },
-        "profiles": [
-            {
-                "network": "<NETWORK>",
-                "username": "<USERNAME>",
-                "url": "<URL>"
-            }
-        ]
-    },
-    "work": [
-        {
-            "company": "University of Southern California",
-            "position": "Tutor",
-            "website": "<COMPANY_WEBSITE>",
-            "startDate": "August 2016",
-            "endDate": "May 2017",
-            "summary": "On professor's recommendation, I worked as a peer tutor to teach students Econometrics and Micro/Macroeconmic concepts biweekly.",
-            "highlights": [
-                "Tutored visually disabled student in Econometrics class by helping him conceptualize graphs, he later earned an A- in the class.",
-                "Educated a student-athlete in Economics by contextualizing difficult concepts with everyday real world scenarios"
-            ]
-        }
-    ],
-    "volunteer": [
-        {
-            "organization": "<ORGANIZATION_NAME>",
-            "position": "<POSITION>",
-            "website": "<WEBSITE>",
-            "startDate": "<START_DATE>",
-            "endDate": "<END_DATE>",
-            "summary": "<SUMMARY>",
-            "highlights": [
-                "<HIGHTLIGHT_1>",
-                "<HIGHTLIGHT_2>",
-                "<HIGHTLIGHT_3>"
-            ]
-        }
-    ],
-    "education": [
-        {
-            "institution": "University of Southern California",
-            "area": "B.A. in Economics, Minor in Computer Programming",
-            "endDate": "May 2017",
-            "gpa": "<GRADE_POINT_AVERAGE>"
-        }
-    ],
-    "awards": [
-        {
-            "title": "2017 ASA DataFest Award: Best Use of Statistical Models",
-            "date": "April 2017",
-            "summary": "Headed a team of 5 students, using hierarchical clustering, we categorized 1 million rows of user data provided from Expedia into 5 major consumers groups. Based on their purchasing habits by month and day, we made recommendations to Expedia on how they could increase revenue by targeted advertising"
-        }
-    ],
-    "projects": [
-        {
-            "name": "XtremeChat",
-            "category": "Communications App",
-            "releaseDate": "December 2017",
-            "website": "www.xtremechat.net",
-            "summary": "Video and text chat app for users to record and share files",
-            "image": {
-                "modal": "<MODAL_IMAGE>",
-                "thumb": "<THUMBNAIL_IMAGE>"
-            },
-            "keywords": [
-                "<KEYWORD_1>",
-                "<KEYWORD_2>",
-                "<KEYWORD_3>"
-            ]
-        },
-        {
-            "name": "XtremeChat",
-            "category": "Communications App",
-            "releaseDate": "December 2017",
-            "website": "www.xtremechat.net",
-            "summary": "Video and text chat app for users to record and share files",
-            "image": {
-                "modal": "<MODAL_IMAGE>",
-                "thumb": "<THUMBNAIL_IMAGE>"
-            },
-            "keywords": [
-                "<KEYWORD_1>",
-                "<KEYWORD_2>",
-                "<KEYWORD_3>"
-            ]
-        },
-        {
-            "name": "XtremeChat",
-            "category": "Communications App",
-            "releaseDate": "December 2017",
-            "website": "www.xtremechat.net",
-            "summary": "Video and text chat app for users to record and share files",
-            "image": {
-                "modal": "<MODAL_IMAGE>",
-                "thumb": "<THUMBNAIL_IMAGE>"
-            },
-            "keywords": [
-                "<KEYWORD_1>",
-                "<KEYWORD_2>",
-                "<KEYWORD_3>"
-            ]
-        }
-    ],
-    "skills": [
-        {
-            "title": "Programming Languages",
-            "description": [
-                "Most comfortable with Javascript, C++ and iOS app programming,",
-                "with Javascript frameworks such as React.js, Angular, Redux, Express.js, MongoDB, MySQL",
-                "experienced with using editors such as Visual Studio Code, Xcode, Eclipse"
-            ],
-            "skillDetails": [
-                {
-                    "name": "Javascript",
-                    "level": "90",
-                    "keywords": [
-                        "<KEYWORD_1>",
-                        "<KEYWORD_2>",
-                        "<KEYWORD_3>"
-                    ]
-                },  
-                {
-                    "name": "C++",
-                    "level": "70",
-                    "keywords": [
-                        "<KEYWORD_1>",
-                        "<KEYWORD_2>",
-                        "<KEYWORD_3>"
-                    ]
-                },
-                {
-                    "name": "Objective C/ Swift",
-                    "level": "90",
-                    "keywords": [
-                        "<KEYWORD_1>",
-                        "<KEYWORD_2>",
-                        "<KEYWORD_3>"
-                    ]
-                }
-            ]
-        }
-    ],
-    "languages": [
-        {
-            "name": "<LANGUAGE_NAME>",
-            "level": "<LANGUAGE_LEVEL>"
-        }
-    ],
-    "interests": [
-        {
-            "name": "<INTEREST_NAME>",
-            "keywords": [
-                "<KEYWORD_1>",
-                "<KEYWORD_2>",
-                "<KEYWORD_3>"
-            ]
-        }
-    ]
+	"basics": {
+		"name": "Yi Yang Tan",
+		"label": "Software Engineer",
+		"picture": "https://i.imgur.com/4PZmUNk.jpg",
+		"email": "yangtan.wfn@gmail.com",
+		"website": "yiyangtan.com",
+		"summary": [
+			"Analytical, creative, persistent and team-oriented software engineer with 3 years of professional experience writing code for web, mobile apps, mobile games and data science.",
+			"Love learning new and upcoming technologies such as machine-learning, blockchain tech and virtual reality",
+			"Hobbies include building fun websites and trying out projects on the Raspberry Pi."
+		],
+		"location": {
+			"address": "<ADDRESS>",
+			"postalCode": "<POSTAL_CODE>",
+			"city": "Singapore",
+			"countryCode": "+65",
+			"region": "Southeast Asia"
+		},
+		"profiles": [
+			{
+				"network": "LinkedIn",
+				"username": "<USERNAME>",
+				"url": "https://www.linkedin.com/in/yiytan/"
+			}
+		]
+	},
+	"work": [
+		{
+			"company": "Ufinity Pte. Ltd.",
+			"position": "Software Engineer",
+			"website": "https://www.ufinity.com/",
+			"startDate": "June 2019",
+			"endDate": "Present",
+			"summary": "Work as a developer in a 30 strong team of engineers and UI/UX designers as part of GovTech, where we do weekly production release of our app (Moments of Life). Adhere to scrum practices and test-driven development in order to adapt to changing requirements while maintaining code quality.",
+			"highlights": [
+				"Utilizing BLE(Bluetooth Low Energy) beacon technology, developed a showcase feature of our app for new users to download and explore an exhibition area with beacons placed throughout the venue.",
+				"Developed a CMS(Content Management System) for stakeholders of our app to publish and unpublish articles and events on our app, after proper validation.",
+				"Migrated backend services from a different commercial cloud onto the AWS platform, which required complete refactoring of authentication handling, web cookies and redirection handling."
+			]
+		}
+	],
+	"volunteer": [
+		{
+			"organization": "<ORGANIZATION_NAME>",
+			"position": "<POSITION>",
+			"website": "<WEBSITE>",
+			"startDate": "<START_DATE>",
+			"endDate": "<END_DATE>",
+			"summary": "<SUMMARY>",
+			"highlights": [
+				"<HIGHTLIGHT_1>",
+				"<HIGHTLIGHT_2>",
+				"<HIGHTLIGHT_3>"
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "University of Southern California",
+			"area": "B.A. in Economics, Minor in Computer Programming",
+			"endDate": "May 2017",
+			"gpa": "<GRADE_POINT_AVERAGE>"
+		}
+	],
+	"awards": [
+		{
+			"title": "2017 ASA DataFest Award: Best Use of Statistical Models",
+			"date": "April 2017",
+			"summary": "Headed a team of 5 students, using hierarchical clustering, we categorized 1 million rows of user data provided from Expedia into 5 major consumers groups. Based on their purchasing habits by month and day, we made recommendations to Expedia on how they could increase revenue by targeted advertising"
+		}
+	],
+	"projects": [
+		{
+			"name": "XtremeChat",
+			"category": "Communications App",
+			"releaseDate": "December 2017",
+			"website": "www.xtremechat.net",
+			"summary": "Video and text chat app for users to record and share files",
+			"image": {
+				"modal": "<MODAL_IMAGE>",
+				"thumb": "<THUMBNAIL_IMAGE>"
+			},
+			"keywords": [
+				"<KEYWORD_1>",
+				"<KEYWORD_2>",
+				"<KEYWORD_3>"
+			]
+		},
+		{
+			"name": "XtremeChat",
+			"category": "Communications App",
+			"releaseDate": "December 2017",
+			"website": "www.xtremechat.net",
+			"summary": "Video and text chat app for users to record and share files",
+			"image": {
+				"modal": "<MODAL_IMAGE>",
+				"thumb": "<THUMBNAIL_IMAGE>"
+			},
+			"keywords": [
+				"<KEYWORD_1>",
+				"<KEYWORD_2>",
+				"<KEYWORD_3>"
+			]
+		},
+		{
+			"name": "XtremeChat",
+			"category": "Communications App",
+			"releaseDate": "December 2017",
+			"website": "www.xtremechat.net",
+			"summary": "Video and text chat app for users to record and share files",
+			"image": {
+				"modal": "<MODAL_IMAGE>",
+				"thumb": "<THUMBNAIL_IMAGE>"
+			},
+			"keywords": [
+				"<KEYWORD_1>",
+				"<KEYWORD_2>",
+				"<KEYWORD_3>"
+			]
+		}
+	],
+	"skills": [
+		{
+			"title": "Programming Languages",
+			"description": [
+				"Most comfortable with Javascript, C++ and iOS app programming,",
+				"with Javascript frameworks such as React.js, Angular, Redux, Express.js, MongoDB, MySQL",
+				"experienced with using editors such as Visual Studio Code, Xcode, Eclipse"
+			],
+			"skillDetails": [
+				{
+					"name": "Javascript",
+					"level": "90",
+					"keywords": [
+						"<KEYWORD_1>",
+						"<KEYWORD_2>",
+						"<KEYWORD_3>"
+					]
+				},
+				{
+					"name": "C++",
+					"level": "70",
+					"keywords": [
+						"<KEYWORD_1>",
+						"<KEYWORD_2>",
+						"<KEYWORD_3>"
+					]
+				},
+				{
+					"name": "Objective C/ Swift",
+					"level": "90",
+					"keywords": [
+						"<KEYWORD_1>",
+						"<KEYWORD_2>",
+						"<KEYWORD_3>"
+					]
+				}
+			]
+		}
+	],
+	"languages": [
+		{
+			"name": "<LANGUAGE_NAME>",
+			"level": "<LANGUAGE_LEVEL>"
+		}
+	],
+	"interests": [
+		{
+			"name": "<INTEREST_NAME>",
+			"keywords": [
+				"<KEYWORD_1>",
+				"<KEYWORD_2>",
+				"<KEYWORD_3>"
+			]
+		}
+	]
 }
